@@ -53,7 +53,10 @@ module.exports = {
         {
           title: '算法',
           collapsable: true,
-          children: [['algorithm/UglyNumbersPQorTreeSet', '丑数']]
+          children: [
+            ['algorithm/UglyNumbersPQorTreeSet', '丑数'],
+            ['algorithm/Supplier', '供应商']
+          ]
         },
         // {
         //   title: '其他',
