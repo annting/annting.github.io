@@ -6,31 +6,16 @@ on:
       - blog
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [12.x]
-
     steps:
-      - uses: actions/checkout@v1
-      - name: 步骤：第一步 -> Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
+    - name: Checkout
+      uses: actions/checkout@master
 
-      - name: 步骤：第二步 -> 安装依赖
-        run: |
-          npm install
-          npm run build
-        env:
-          CI: true
-
-      - name: 步骤：第三步 -> 使用脚本部署
-        env:
-          ACCESS_TOKEN_DEPLOY: ${{secrets.ACCESS_TOKEN }}
-          PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: ./docs/.vuepress/dist
-          CNAME: annting.cn
-        uses: veaba/vuepress-actions@v0.83
+    - name: vuepress-deploy
+      uses: jenkey2011/vuepress-deploy@master
+      env:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        TARGET_BRANCH: master
+        BUILD_SCRIPT: yarn && yarn build
+        BUILD_DIR: ./docs/.vuepress/dist/
