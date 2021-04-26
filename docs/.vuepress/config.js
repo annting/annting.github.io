@@ -21,7 +21,8 @@ module.exports = {
 
       //格式二：添加下拉菜单，link指向的文件路径
 
-      { text: '前端积累', link: '/pages/frontend/ui5/dynamic-table.md' },
+
+      // { text: '前端积累', link: '/pages/frontend/ui5/dynamic-table.md' },
 
       //格式三：跳转至外部网页，需http/https前缀
       { text: 'Github', link: 'https://github.com/annting' }
@@ -44,17 +45,22 @@ module.exports = {
         //   collapsable: true,
         //   children: [['test2.md', '子菜单1']]
         // },
+        // {
+        //   title: 'SapUI5/OpenUI5',
+        //   collapsable: true,
+        //   children: [['ui5/dynamic-table', '动态表格']]
+        // },
         {
-          title: 'SapUI5/OpenUI5',
+          title: '算法',
           collapsable: true,
-          children: [['ui5/dynamic-table', '动态表格']]
+          children: [['algorithm/UglyNumbersPQorTreeSet', '丑数']]
         },
-        {
-          title: '其他',
-          collapsable: true,
-          children: [['other/20200107', 'JS实现千分位格式化'],['other/20200323', 'Vue + 高德地图导出详细线路坐标']]
-        }
-       
+        // {
+        //   title: '其他',
+        //   collapsable: true,
+        //   children: [['other/20200107', 'JS实现千分位格式化'],['other/20200323', 'Vue + 高德地图导出详细线路坐标']]
+        // }
+
       ]
       //...可添加多个不同的侧边栏，不同页面会根据路径显示不同的侧边栏
     }
