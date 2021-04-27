@@ -9,10 +9,16 @@ module.exports = {
       //浏览器的标签栏的网页图标，第一个'/'会遍历public文件夹的文件
     ]
   ],
+  theme: 'reco',
 
   //下面涉及到的md文件和其他文件的路径下一步再详细解释
   themeConfig: {
     logo: '/logo.png', //网页顶端导航栏左上角的图标
+
+    record: '陕ICP备19007508号-1',
+    recordLink: 'https://beian.miit.gov.cn',
+    // 项目开始时间，只填写年份
+    startYear: '2020',
 
     //顶部导航栏
     nav: [
