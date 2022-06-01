@@ -56,19 +56,19 @@ module.exports = {
         //   collapsable: true,
         //   children: [['ui5/dynamic-table', '动态表格']]
         // },
-        {
-          title: '算法',
-          collapsable: true,
-          children: [
-            ['algorithm/UglyNumbersPQorTreeSet', '丑数'],
-            ['algorithm/Supplier', '供应商']
-          ]
-        },
         // {
-        //   title: '其他',
+        //   title: '算法',
         //   collapsable: true,
-        //   children: [['other/20200107', 'JS实现千分位格式化'],['other/20200323', 'Vue + 高德地图导出详细线路坐标']]
-        // }
+        //   children: [
+        //     ['algorithm/UglyNumbersPQorTreeSet', '丑数'],
+        //     ['algorithm/Supplier', '供应商']
+        //   ]
+        // },
+        {
+          title: '其他',
+          collapsable: true,
+          children: [['other/20200107', 'JS实现千分位格式化'],['other/20200323', 'Vue + 高德地图导出详细线路坐标']]
+        }
 
       ]
       //...可添加多个不同的侧边栏，不同页面会根据路径显示不同的侧边栏
